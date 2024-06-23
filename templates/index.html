@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Kelulusan Mahasiswa</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-4">Prediksi Kelulusan Mahasiswa</h1>
+        <form action="/predict" method="POST">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="course">Course:</label>
+                        <select id="course" name="course" class="form-control" required>
+                            <option value="" disabled selected>Kursus</option>
+                            <option value="1">Biofuel Production Technologies</option>
+                            <option value="2">Animation and Multimedia Design</option>
+                            <option value="3">Social Service (evening attendance)</option>
+                            <option value="4">Agronomy</option>
+                            <option value="5">Communication Design</option>
+                            <option value="6">Veterinary Nursing</option>
+                            <option value="7">Informatics Engineering</option>
+                            <option value="8">Equiniculture</option>
+                            <option value="9">Management</option>
+                            <option value="10">Social Service</option>
+                            <option value="11">Tourism</option>
+                            <option value="12">Nursing</option>
+                            <option value="13">Oral Hygiene</option>
+                            <option value="14">Advertising and Marketing Management</option>
+                            <option value="15">Journalism and Communication</option>
+                            <option value="16">Basic Education</option>
+                            <option value="17">Management (evening attendance)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bayar">Tuition fees up to date:</label>
+                        <select id="bayar" name="bayar" class="form-control" required>
+                            <option value="" disabled selected>Status</option>
+                            <option value="0">Tidak</option>
+                            <option value="1">Ya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" class="form-control" required>
+                            <option value="" disabled selected>Jenis Kelamin</option>
+                            <option value="0">Perempuan</option>
+                            <option value="1">Laki-laki</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bea">Scholarship holder:</label>
+                        <select id="bea" name="bea" class="form-control" required>
+                            <option value="" disabled selected>Status</option>
+                            <option value="0">Tidak</option>
+                            <option value="1">Ya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="ip1">Curricular units 1st sem (approved):</label>
+                        <input type="number" id="ip1" name="ip1" class="form-control" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nilai1">Curricular units 1st sem (grade):</label>
+                        <input type="number" id="nilai1" name="nilai1" class="form-control" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ip2">Curricular units 2nd sem (approved):</label>
+                        <input type="number" id="ip2" name="ip2" class="form-control" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nilai2">Curricular units 2nd sem (grade):</label>
+                        <input type="number" id="nilai2" name="nilai2" class="form-control" step="0.1" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Prediksi</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
